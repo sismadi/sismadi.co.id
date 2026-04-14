@@ -13,7 +13,7 @@
 --font-body:    'Inter', 'Segoe UI', sans-serif;
 --font-mono:    'JetBrains Mono', 'Courier New', monospace;
 
- --tSize:   15px;   /* body utama */
+ --tSize:   16px;   /* body utama */
  --h3Size:  24px;   /* H2 sub-section */
  --h2Size:  32px;   /* H2 section */
  --h1Size:  40px;   /* H1 utama */
@@ -49,6 +49,14 @@ h3, .h3 {
 }
 
 
+.hero h1{
+  font-size: 56px;
+  letter-spacing:1;
+  line-height: 1;
+  font-weight: bold;        /* extra bold */
+
+
+}
 
 * { box-sizing: border-box; }
 
@@ -228,7 +236,9 @@ background: #ffffff;
 
 }
 .judul{
-  font-size: 2em;
+  font-size: 25px;
+  font-weight: bold;        /* extra bold */
+
 }
 .judul2 {
   font-size: 4em;
@@ -247,7 +257,6 @@ margin: 0;
 .header{   font-size: 2em;  padding: 20px 0px; color: white;
 font: bold 2em times new roman;
 position:relative;
-
 
 }
 
@@ -300,7 +309,7 @@ right: 0;
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 0px;
 
 }
 
@@ -374,8 +383,8 @@ right: 0;
 @media screen and (max-width: 450px) {
 [class*='col-'],.main { width: 100%; }
 #page1, #page5 { padding: 20px 30px; }
-.sub {
-    left: 30px;}
+.sub { left: 20px;}
+.header,.footer{ padding: 20px;}
 
 
 }
