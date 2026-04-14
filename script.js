@@ -55,37 +55,7 @@ var web = {
 
         return false;
     },
-    navigate1: function(slug) {
-      var targetSlug;
 
-      // 1. Tentukan target slug
-      if (slug && typeof slug === 'string') {
-          targetSlug = slug;
-      } else {
-          var params = new URLSearchParams(window.location.search);
-          // Mengambil key pertama sebagai slug (misal: ?profile -> profile)
-          targetSlug = params.keys().next().value || 'home';
-      }
-
-      // 2. Render konten berdasarkan nama dataset
-      // Pastikan objek 'pages' sudah didefinisikan secara global
-      if (typeof pages !== 'undefined' && pages[targetSlug]) {
-          ui.render('content', pages[targetSlug]);
-      }
-
-      // 3. Update URL TANPA memaksa ke root '/'
-      // Gunakan window.location.pathname agar tetap di direktori yang sama
-      var newUrl = window.location.pathname + '?' + targetSlug;
-      window.history.pushState({ slug: targetSlug }, '', newUrl);
-
-      // 4. Reset UI state
-      window.scrollTo(0, 0);
-
-      // Re-render SVG icons jika menggunakan library svg.js Bapak
-      if (typeof svg !== 'undefined') svg.di();
-
-      return false;
-  }
 
 };
 
@@ -102,23 +72,7 @@ const components = {
         </header>
     `,
 
-    table1: (d) => {
-        const items = d.items || [];
-        if (!items.length) return '';
-        const keys = Object.keys(items[0]);
-        return `
-            <h2>${d.title}</h2>
-            <table>
-                <thead>
-                    <tr>${keys.map(k => `<th>${k}</th>`).join('')}</tr>
-                </thead>
-                <tbody>
-                    ${items.map(row => `
-                        <tr>${keys.map(k => `<td>${row[k]}</td>`).join('')}</tr>
-                    `).join('')}
-                </tbody>
-            </table>`;
-    },
+
 
     table: (d) => {
         const items = d.items || [];
@@ -164,9 +118,8 @@ const components = {
             </div>`;
     },
 
-
     hero: (d) => `
-            <div class="row page">
+            <div class="row page hero">
                 <div class="col-2-3 artikel">
                     <h1>${d.title}</h1><br>
                     <em>${d.tagline}</em> &mdash; ${d.description}<br><br>
