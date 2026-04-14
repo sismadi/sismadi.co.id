@@ -118,20 +118,29 @@ const components = {
             </div>`;
     },
 
-    hero: (d) => `
-            <div class="row page hero">
-                <div class="col-2-3 artikel">
-                    <h1>${d.title}</h1><br>
-                    <em>${d.tagline}</em> &mdash; ${d.description}<br><br>
-                    ${d.badges.map(b => `<span class="badge">${b}</span>`).join(' ')}
-                    <br><br>
-                    <a href="/?${d.cta.link}" onclick="return web.navigate('${d.cta.link}')">${d.cta.text}</a>
-                </div>
-                <div class="col-1-3 artikel">
-                    <i style="max-width:300px;" class="${d.imgClass} kanan img"></i>
-                </div>
+    hero: (d) => {
+    // Logika deteksi: Pilih antara img (foto) atau imgClass (SVG)
+    const media = d.img
+        ? `<img src="${d.img}" alt="${d.title}" class="img-hero">`
+        : d.imgClass
+            ? `<i style="max-width:300px;" class="${d.imgClass} kanan img"></i>`
+            : '';
+
+    return `
+        <div class="row page hero">
+            <div class="col-2-3 artikel">
+                <h1>${d.title}</h1><br>
+                <em>${d.tagline}</em> &mdash; ${d.description}<br><br>
+                ${d.badges.map(b => `<span class="badge">${b}</span>`).join(' ')}
+                <br><br>
+                <a href="/?${d.cta.link}" onclick="return web.navigate('${d.cta.link}')" class="btn-cta">${d.cta.text}</a>
             </div>
-        `,
+            <div class="col-1-3 artikel">
+                ${media}
+            </div>
+        </div>
+    `;
+},
 
         features: (d) => `
             <div class="row gading">
@@ -149,79 +158,85 @@ const components = {
 
     // Helper untuk memproses baris teks tanpa jarak berlebih
 
+    lineRenderer: (lines, context = {}) => {
+        return lines.map(line => {
+            // 1. Pre-processing: Konversi format **text** menjadi <strong>text</strong> di dalam baris apa pun
+            let formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
 
-lineRenderer: (lines, context = {}) => {
-    return lines.map(line => {
+            // 2. Line-based Rules
+            if (formattedLine === '---') return '<hr>';
+            if (formattedLine.startsWith('### ')) return `<h3>${formattedLine.replace('### ', '')}</h3>`;
+            if (formattedLine.startsWith('## ')) return `<h2>${formattedLine.replace('## ', '')}</h2>`;
+            if (formattedLine.startsWith('# ')) return `<h1>${formattedLine.replace('# ', '')}</h1>`;
 
-      if (line === '---') return '<hr>';
-      if (line.startsWith('### ')) return `<h3>${line.replace('### ', '')}</h3>`;
-      if (line.startsWith('## ')) return ` <h2>${line.replace('## ', '')} </h2>`;
-      if (line.startsWith('# ')) return ` <h1>${line.replace('# ', '')} </h1>`;
-      if (line.startsWith('** ')) return ` <strong>${line.replace('** ', '')} </strong>`;
-      if (line.startsWith('• ')) return `<div style="padding-left:10px;">&bull; ${line.replace('• ', '')}</div>`;
+            // Aturan khusus baris yang diawali ** (tetap dipertahankan sesuai permintaan Anda)
+            if (formattedLine.startsWith('** ')) return `<strong>${formattedLine.replace('** ', '')}</strong>`;
 
-      if (line.startsWith('badge:')) {return `<span class="badge">${line.replace('badge:', '')}</span>`;}
-      if (line.startsWith('step:')) {
-            const [_, s, t, desc] = line.split(':');
-            return `<div class="tl-item"><div class="tl-year">${s}</div><div class="tl-title">${t}</div><div class="tl-desc">${desc}</div></div>`;
-        }
-      if (line.startsWith('skill:')) {
-            const [label, percent] = line.replace('skill:', '').split(':');
-            return `
-                <div class="skill-row">
-                    <div class="skill-label">${label}</div>
-                    <div class="skill-track"><div class="skill-fill" style="width:${percent}%"></div></div>
-                </div>`;
-        }
+            if (formattedLine.startsWith('• ')) return `<div style="padding-left:10px;">&bull; ${formattedLine.replace('• ', '')}</div>`;
 
-      if (line.startsWith('contact:')) {
-              const [_, icon, label, val, link] = line.split(':');
-                    return `
-                        <div style="margin-bottom:15px;">
-                            <i class="${icon} img-32" style="float:left;margin-right:8px;"></i>
-                            <strong>${label}</strong><br>
-                            ${link ? `<a href="${link}" target="_blank">${val}</a>` : val}
-                            <br clear="all">
-                        </div>`;
+            if (formattedLine.startsWith('badge:')) {
+                return `<span class="badge">${formattedLine.replace('badge:', '')}</span>`;
+            }
+
+            if (formattedLine.startsWith('step:')) {
+                const [_, s, t, desc] = formattedLine.split(':');
+                return `<div class="tl-item"><div class="tl-year">${s}</div><div class="tl-title">${t}</div><div class="tl-desc">${desc}</div></div>`;
+            }
+
+            if (formattedLine.startsWith('skill:')) {
+                const [label, percent] = formattedLine.replace('skill:', '').split(':');
+                return `
+                    <div class="skill-row">
+                        <div class="skill-label">${label}</div>
+                        <div class="skill-track"><div class="skill-fill" style="width:${percent}%"></div></div>
+                    </div>`;
+            }
+
+            if (formattedLine.startsWith('contact:')) {
+                const [_, icon, label, val, link] = formattedLine.split(':');
+                return `
+                    <div style="margin-bottom:15px;">
+                        <i class="${icon} img-32" style="float:left;margin-right:8px;"></i>
+                        <strong>${label}</strong><br>
+                        ${link ? `<a href="${link}" target="_blank">${val}</a>` : val}
+                        <br clear="all">
+                    </div>`;
+            }
+
+            if (formattedLine.startsWith('form:')) {
+                const fields = context.fields || [];
+                return `
+                    <form class="dynamic-form">
+                        ${fields.map(f => {
+                            const label = f.label ? `<div>${f.label}:</div>` : '';
+                            if (f.type === 'select') {
+                                return `${label}<select>${f.options.map(o => `<option>${o}</option>`).join('')}</select>`;
+                            }
+                            if (f.type === 'textarea') {
+                                return `${label}<textarea rows="${f.rows}">${f.placeholder || ''}</textarea>`;
+                            }
+                            return `${label}<input type="${f.type}" placeholder="${f.placeholder || ''}">`;
+                        }).join('')}
+                        <input type="submit" value="${context.submitText || 'Kirim'}" style="margin-top:10px;">
+                    </form>
+                `;
+            }
+
+            if (formattedLine.startsWith('table:')) {
+                if (context.table && Array.isArray(context.table)) {
+                    return components.table({ items: context.table });
                 }
-
-      if (line.startsWith('form:')) {
-            const fields = context.fields || [];
-            return `
-                <form class="dynamic-form">
-                    ${fields.map(f => {
-                        const label = f.label ? `<div>${f.label}:</div>` : '';
-                        if (f.type === 'select') {
-                            return `${label}<select>${f.options.map(o => `<option>${o}</option>`).join('')}</select>`;
-                        }
-                        if (f.type === 'textarea') {
-                            return `${label}<textarea rows="${f.rows}">${f.placeholder || ''}</textarea>`;
-                        }
-                        return `${label}<input type="${f.type}" placeholder="${f.placeholder || ''}">`;
-                    }).join('')}
-                    <input type="submit" value="Kirim Pesanan" style="margin-top:10px;">
-                </form>
-            `;
-        }
-
-        if (line.startsWith('table:')) {
-                    // Cek apakah ada data tabel di dalam context (objek kolom tersebut)
-                    if (context.table && Array.isArray(context.table)) {
-                        return components.table({ items: context.table });
-                    }
-
-                    // Fallback: Jika tidak ada di context, cari di repository global 'tables' (opsional)
-                    const tableName = line.split(':')[1];
-                    if (typeof tables !== 'undefined' && tables[tableName]) {
-                        return components.table(tables[tableName]);
-                    }
-                    return '';
+                const tableName = formattedLine.split(':')[1];
+                if (typeof tables !== 'undefined' && tables[tableName]) {
+                    return components.table(tables[tableName]);
                 }
+                return '';
+            }
 
-
-        return `<div>${line}</div>`;
-    }).join('');
-},
+            // Default render sebagai div (paragraf)
+            return `<div>${formattedLine}</div>`;
+        }).join('');
+    },
 
       titleHero: (d) => `
               <div class="row page">

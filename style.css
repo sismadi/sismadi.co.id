@@ -54,9 +54,35 @@ h3, .h3 {
   letter-spacing:1;
   line-height: 1;
   font-weight: bold;        /* extra bold */
-
-
 }
+
+
+.img-hero {
+  /* Gunakan max-width agar tidak kebesaran di layar desktop */
+    width: 80%;
+    max-width: 280px;
+
+    /* KUNCI: Menjaga lebar dan tinggi selalu 1:1 */
+    aspect-ratio: 1 / 1;
+
+    /* Hapus height manual agar tidak konflik dengan aspect-ratio */
+    height: auto;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background: #fff;
+
+    /* Layouting */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto; /* Menjaga posisi di tengah jika kontainer mengecil */
+}
+
+
 
 * { box-sizing: border-box; }
 
@@ -192,19 +218,21 @@ background: #F2F3EB;
 .footer{
 padding: 20px 0px;
 color: #ffffff;
+border-top: 5px solid black;
+
+
 }
 
 .page4{
-border-bottom: 5px solid black;
+/* border-bottom: 5px solid black; */
+border-top: 15px solid #F4F4F4;
 background: #ffffff;
 }
 
 .page{
   border-bottom: 15px solid #F4F4F4;
   background: #D5EAF5;
-
-
-  background-image:
+   background-image:
   linear-gradient(100deg,
   rgba(255, 255, 255, 0.1) 35%,
   rgba(255, 255, 255, 0.3) 37%,
