@@ -23,7 +23,7 @@ const pages = {
                 },
                 {
                     icon: 'di-setting',
-                    title: 'PT Sismadi langi Solusi',
+                    title: 'PT Sismadi Langit Solusi',
                     content: 'Penerbitan buku teknologi dan pengelolaan jurnal ilmiah <strong>RETAS &amp; GATRA</strong> sebagai kontribusi aktif riset TI.',
                     linkText: '+ Detail Publikasi',
                     linkTarget: 'press'
@@ -183,7 +183,7 @@ const pages = {
     ],
 
     'press': [
-        { section: 'titleHero', title: 'Sismadi Press' },
+        { section: 'titleHero', title: 'PT Sismadi Langit Solusi' },
         {
             section: 'article',
             layout: 'split',
@@ -199,7 +199,7 @@ const pages = {
             rightCol: {
                 subtitle: 'Penerbitan Buku',
                 lines: [
-                    'Melayani jasa penerbitan buku referensi teknologi ber-ISBN (KBLI 58110).',
+                    'Melayani jasa penerbitan buku referensi teknologi (KBLI 58110).',
                     '&bull; Buku Ajar &amp; Referensi TIK',
                     '&bull; Jurnal RETAS &amp; GATRA',
                     '---',
