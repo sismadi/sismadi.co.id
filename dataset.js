@@ -23,8 +23,8 @@ const pages = {
                 },
                 {
                     icon: 'di-setting',
-                    title: 'Sismadi Press',
-                    content: 'Penerbitan buku teknologi ber-<strong>ISBN</strong> dan pengelolaan jurnal ilmiah <strong>RETAS &amp; GATRA</strong> sebagai kontribusi aktif riset TI.',
+                    title: 'PT Sismadi langi Solusi',
+                    content: 'Penerbitan buku teknologi dan pengelolaan jurnal ilmiah <strong>RETAS &amp; GATRA</strong> sebagai kontribusi aktif riset TI.',
                     linkText: '+ Detail Publikasi',
                     linkTarget: 'press'
                 },
