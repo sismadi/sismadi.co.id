@@ -58,7 +58,7 @@ const pages = {
                     'Dipimpin oleh <strong>Wawan Sismadi, M.Kom.</strong>, Dosen Tetap Universitas IPWIJA dan saat ini menempuh studi <strong>Doktor (S3) Informatika</strong> di UAD (mulai 2025).',
                     '&bull; NIB: 2906220081075 (PMDN)',
                     '&bull; Asesor Kompetensi BNSP &mdash; Mobile &amp; Web Programming',
-                    '&bull; SINTA Score: 259 &middot; SINTA ID: 6848496'
+                    '&bull; SINTA Score: 280 &middot; SINTA ID: 6848496'
                 ]
             }
         }
@@ -193,7 +193,7 @@ const pages = {
                     '** 2026 &middot; EDUTECH Vol.6', 'Presensi Daring Berbasis WebAssembly &amp; Microservices',
                     '** 2025 &middot; Cendekia Vol.5', 'Implementasi Microservice Bank Sampah Digital',
                     '---',
-                    'SINTA Score: 259 &middot; SINTA ID: 6848496'
+                    'SINTA Score: 280 &middot; SINTA ID: 6848496'
                 ]
             },
             rightCol: {
@@ -235,7 +235,7 @@ const pages = {
                         type: 'select',
                         name: 'layanan',
                         label: 'Layanan',
-                        options: ['Pengembangan Web (DonatJS)', 'Cybersecurity Audit', 'Penerbitan Buku ISBN', 'Pelatihan Kompetensi TI']
+                        options: ['Pengembangan Web (DonatJS)', 'Cybersecurity Audit', 'Penerbitan Buku', 'Pelatihan Kompetensi TI']
                     },
                     { type: 'textarea', name: 'pesan', label: 'Detail Kebutuhan', rows: 4 }
                 ]
