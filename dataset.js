@@ -221,7 +221,7 @@ const pages = {
                     'step:Langkah 1:Pilih &amp; Isi Form:Tentukan layanan di formulir kanan.',
                     'step:Langkah 2:Konsultasi:Tim kami menghubungi Anda via WA/Email.',
                     'step:Langkah 3:Kontrak:Kesepakatan dituangkan dalam MoU formal.',
-                    'step:Langkah 4:Bayar:<strong>BCA: 6280360048</strong> a.n. Wawan Sismadi',
+                    'step:Langkah 4:Bayar:<strong>Mandiri: xxxxxxxxxx</strong> a.n. PT Sismadi Langit Solusi',
                     'step:Langkah 5:Eksekusi:Pekerjaan dimulai sesuai jadwal.'
                 ]
             },
