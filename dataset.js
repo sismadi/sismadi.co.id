@@ -230,7 +230,7 @@ const pages = {
         {
             section: 'titleHero',
             title: 'Pemesanan Layanan',
-            description: 'Setiap proyek dimulai dengan konsultasi — bukan langsung invoice. Isi formulir, Tim kami menghubungi Anda dalam waktu 1 hari kerja.'
+            description: 'Setiap proyek dimulai dengan konsultasi untuk menyepakati ruang lingkup terlebih dahulu. Isi formulir, Tim kami menghubungi Anda dalam waktu 1 hari kerja.'
         },
         {
             section: 'article',
