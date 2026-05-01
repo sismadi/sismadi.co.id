@@ -288,7 +288,7 @@ const pages = {
                     'contact:di-web|Website|sismadi.co.id|https://sismadi.co.id',
                     'contact:di-linkedin|LinkedIn|linkedin.com/in/sismadi|https://linkedin.com/in/sismadi',
                     'contact:di-github|GitHub|github.com/sismadi|https://github.com/sismadi',
-                    'contact:di-geo|Alamat|Jl. Sawo No. 34, Jakarta Timur 13780',
+                    'contact:di-geo|Alamat| Jakarta Timur 13780',
                     '---',
                     '### Jam Operasional',
                     'Senin &ndash; Jumat: 08.00 &ndash; 17.00 WIB',
