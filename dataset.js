@@ -4,11 +4,11 @@ const pages = {
         {
             section: 'hero',
             title: 'PT Sismadi<br>Langit Solusi',
-            tagline: 'Expertise Delivered Personally',
-            description: 'Solusi teknologi Web, Cybersecurity, IoT, dan pelatihan TI yang efisien, aman, dan berkelanjutan — dipimpin langsung oleh praktisi berpengalaman.',
+            tagline: 'Solusi Teknologi. Tercatat Resmi.',
+            description: 'Perusahaan teknologi informasi Jakarta Timur — pengembangan perangkat lunak, portal web, penerbitan buku, dan pelatihan TI. Terdaftar resmi sejak 2022.',
             imgClass: 'di-sls',
-            badges: ['NIB 2906220081075', 'PMDN &middot; PT Perorangan', 'Jakarta Timur'],
-            cta: { text: 'Pelajari Profil Perusahaan &raquo;', link: 'profile' }
+            badges: ['NIB 2906220081075', 'PMDN', 'Jakarta Timur', 'Asesor BNSP'],
+            cta: { text: 'Lihat Layanan &raquo;', link: 'layanan' }
         },
 
         {
@@ -16,237 +16,266 @@ const pages = {
             items: [
                 {
                     icon: 'di-save',
-                    title: 'Software Solutions',
-                    content: 'Pengembangan sistem custom berbasis <strong>DonatJS MVC Framework</strong> &mdash; arsitektur zero-dependency, modular, dan aman.',
+                    title: 'Software Development',
+                    content: 'Pengembangan sistem dan portal web berbasis <strong>DonatJS MVC Framework</strong> — modular, tanpa dependensi eksternal, disesuaikan dengan kebutuhan bisnis.',
                     linkText: '+ Detail Layanan',
-                    linkTarget: 'solutions'
+                    linkTarget: 'layanan'
                 },
                 {
-                    icon: 'di-setting',
-                    title: 'PT Sismadi Langit Solusi',
-                    content: 'Penerbitan buku teknologi dan pengelolaan jurnal ilmiah <strong>RETAS &amp; GATRA</strong> sebagai kontribusi aktif riset TI.',
-                    linkText: '+ Detail Publikasi',
+                    icon: 'di-file',
+                    title: 'Penerbitan Buku',
+                    content: 'Penerbitan buku referensi teknologi informasi. Terdaftar resmi KBLI 58110 dengan Sertifikat Standar OSS.',
+                    linkText: '+ Katalog Terbitan',
                     linkTarget: 'press'
                 },
                 {
-                    icon: 'di-person',
-                    title: 'IT Academy',
-                    content: 'Pelatihan kompetensi bidang Mobile &amp; Web Programming, workshop microservices, dan IoT berbasis praktik industri.',
-                    linkText: '+ Detail Pelatihan',
-                    linkTarget: 'solutions'
+                    icon: 'di-edu',
+                    title: 'Pelatihan TI',
+                    content: 'Kursus pemrograman web dan desain web berbasis skema kompetensi BNSP. Diselenggarakan melalui <strong>Sismadi Edu</strong>.',
+                    linkText: '+ Sismadi Edu',
+                    linkTarget: 'https://sismadi.sch.id'
                 }
             ]
         },
 
         {
             section: 'article',
-            title: 'Berita & Publikasi',
             layout: 'split',
             leftCol: {
-                subtitle: 'Publikasi Ilmiah Terbaru',
+                subtitle: 'Identitas Perusahaan',
                 lines: [
-                    '<strong>2026 &middot; EDUTECH Vol.6 No.2</strong>',
-                    'Penerapan Presensi Daring Berbasis WebAssembly &amp; Microservices.',
+                    '**Nama**: PT Sismadi Langit Solusi',
+                    '**NIB**: 2906220081075',
+                    '**AHU**: AHU-011266.AH.01.30.Tahun 2022',
                     '---',
-                    '<strong>2025 &middot; Cendekia Vol.5 No.4</strong>',
-                    'Implementasi Arsitektur Microservice pada Bank Sampah Digital.'
-                ]
-            },
-            rightCol: {
-                subtitle: 'Tentang Pendiri',
-                lines: [
-                    'Dipimpin oleh <strong>Wawan Sismadi, M.Kom.</strong>, Dosen Tetap Universitas IPWIJA dan saat ini menempuh studi <strong>Doktor (S3) Informatika</strong> di UAD (mulai 2025).',
-                    '&bull; NIB: 2906220081075 (PMDN)',
-                    '&bull; Asesor Kompetensi BNSP &mdash; Mobile &amp; Web Programming',
-                    '&bull; SINTA Score: 280 &middot; SINTA ID: 6848496'
-                ]
-            }
-        }
-    ],
-
-    profile: [
-        {
-            section: 'titleHero',
-            title: 'Company Profile'
-        },
-        {
-            section: 'article',
-            layout: 'split',
-            leftCol: {
-                subtitle: 'Legalitas & Identitas',
-                lines: [
-                    '** PT Sismadi Langit Solusi',
-                    'NIB: 2906220081075',
-                    'Status: PT Perorangan (PMDN)',
-                    'Skala: Usaha Mikro',
-                    '---',
-                    'Alamat: Jakarta Timur 13780'
+                    '**Alamat**: Jakarta Timur 13780',
+                    '**Telepon**: 0878-8507-3237',
+                    '**Email**: wawan@sismadi.co.id'
                 ]
             },
             rightCol: {
                 subtitle: 'Tentang Perusahaan',
                 lines: [
-                    'Didirikan oleh Wawan Sismadi, M.Kom.',
+                    'PT Sismadi Langit Solusi didirikan pada <strong>24 Maret 2022</strong> dan tercatat sebagai badan hukum oleh Direktorat Jenderal Administrasi Hukum Umum, Kementerian Hukum dan HAM RI.',
                     '---',
-                    '<strong>PT Sismadi Langit Solusi</strong> adalah perusahaan teknologi informasi berbasis di Jakarta Timur yang bergerak dalam konsultasi TI, pengembangan perangkat lunak, dan keamanan informasi.',
-                    'Perusahaan telah terlibat dalam proyek transformasi digital di lembaga pemerintah, termasuk Kementerian PUPR dan Kementerian Perindustrian.',
+                    'Dipimpin langsung oleh <strong>Wawan Sismadi, M.Kom.</strong> — dosen aktif Informatika, Asesor Kompetensi BNSP, dan pengembang DonatJS Framework.',
                     '---',
                     '## Visi',
-                    'Menjadi mitra teknologi terpercaya yang menghadirkan solusi inovatif, aman, dan berkelanjutan.',
+                    'Menjadi mitra teknologi terpercaya yang menghadirkan solusi inovatif dan berkelanjutan.',
                     '## Misi',
-                    '&bull; Membangun solusi zero-dependency berbasis open source.',
-                    '&bull; Mendukung transformasi digital industri dan lembaga nasional.',
+                    '&bull; Membangun solusi perangkat lunak yang efisien dan terstandarisasi.',
+                    '&bull; Mempublikasikan pengetahuan TI melalui buku dan jurnal ilmiah.',
                     '&bull; Mencetak SDM TI kompeten melalui pelatihan berbasis kompetensi.'
                 ]
             }
         }
     ],
 
-    'expertise': [
-        { section: 'titleHero', title: 'Our Expertise' },
+    legalitas: [
+        {
+            section: 'titleHero',
+            title: 'Legalitas',
+            description: 'Seluruh dokumen legalitas PT Sismadi Langit Solusi diterbitkan secara elektronik melalui sistem OSS Pemerintah RI dan Kementerian Hukum &amp; HAM RI.'
+        },
         {
             section: 'article',
             layout: 'split',
             leftCol: {
-                subtitle: 'Wawan Sismadi',
+                subtitle: 'Dokumen Badan Hukum',
                 lines: [
-                    'M.Kom. &middot; Kandidat Doktor Informatika (UAD)',
-                    '---',
-                    '** 2025/2026 &mdash; sekarang',
-                    'Mahasiswa S3 Informatika &mdash; Universitas Ahmad Dahlan',
-                    '** 2018 &mdash; 2020',
-                    'S2 Ilmu Komputer (M.Kom.) &mdash; Universitas Budi Luhur',
-                    '** 2022 &mdash; sekarang',
-                    'Pendiri &amp; Direktur &mdash; PT Sismadi Langit Solusi',
-                    '** Aktif',
-                    'Dosen Tetap &mdash; Universitas IPWIJA',
-                    '** Aktif',
-                    'Konsultan TI &mdash; Kementerian PUPR &amp; Kemenperin',
-                    '---',
-                    'badge:IT Consultant', 'badge:Asesor BNSP', 'badge:Dosen', 'badge:Peneliti', 'badge:Open Source Dev'
+                    '** Sertifikat Pendirian (AHU) **',
+                    'No. AHU-011266.AH.01.30.Tahun 2022',
+                    'Diterbitkan: 24 Maret 2022',
+                    'Lembaga: Kementerian Hukum dan HAM RI',
+                    'KBLI Utama: 62019 (Aktivitas Pemrograman Komputer Lainnya)',
                 ]
             },
             rightCol: {
-                subtitle: 'Kepakaran Profesional',
+                subtitle: 'Nomor Induk Berusaha (NIB)',
                 lines: [
-                    'Wawan Sismadi adalah dosen, developer, dan konsultan TI yang memadukan riset akademis dengan pengalaman industri nyata.',
+                    '** NIB: 2906220081075 **',
+                    'Diterbitkan: 29 Juni 2022',
+                    'Perubahan ke-2: 29 Mei 2023',
+                    'Lembaga: Kementerian Investasi / BKPM',
                     '---',
-                    '### Keahlian Teknis:',
-                    'skill:Web Development (JS / DonatJS):95',
-                    'skill:Database Management:88',
-                    'skill:Cybersecurity:85',
-                    'skill:IoT &amp; Automasi (ESP32):80',
-                    'skill:Microservices &amp; API:82',
+                    'NIB berlaku di seluruh wilayah Republik Indonesia selama perusahaan menjalankan kegiatan usaha.',
                     '---',
-                    '### Inovasi Open Source:',
-                    '&bull; <strong>DonatJS</strong> &mdash; MVC framework ringan, modular, zero-dependency.',
-                    '&bull; <strong>BayamJS</strong> &amp; <strong>KtuPad</strong> &mdash; tools pendukung ekosistem DonatJS.',
-                    '&bull; <strong>Wafel (wafel.id)</strong> &mdash; platform template web akselerasi UI.'
+                    '** Sertifikat Standar Penerbitan Buku **',
+                    'No. 29062200810750002',
+                    'KBLI: 58110 — Penerbitan Buku',
+                    'Diterbitkan: 16 September 2023',
+                    'Pengawas: Kemendikbudristek'
                 ]
             }
-        }
-    ],
-
-    'solutions': [
-        { section: 'titleHero', title: 'Layanan & Solusi' },
+        },
         {
             section: 'article',
             layout: 'split',
             leftCol: {
                 subtitle: 'KBLI Terdaftar',
                 lines: [
-                    '** 62019', 'Pemrograman Komputer Lainnya',
-                    '** 63122', 'Portal Web &amp; Platform Digital',
-                    '** 85492', 'Jasa Pendidikan Komputer Swasta',
-                    '** 58110', 'Penerbitan Buku',
-                    '** 47411', 'Perdagangan Eceran Komputer Dan Perlengkapannya',
-                    '---',
-                    'badge:62019', 'badge:63122', 'badge:85492', 'badge:58110', 'badge:47411'
+                    'table:table'
+                ],
+                table: [
+                    { 'Kode': '62019', 'Bidang Usaha': 'Aktivitas Pemrograman Komputer Lainnya' },
+                    { 'Kode': '63122', 'Bidang Usaha': 'Portal Web dan/atau Platform Digital Komersial' },
+                    { 'Kode': '47411', 'Bidang Usaha': 'Perdagangan Eceran Komputer dan Perlengkapannya' },
+                    { 'Kode': '58110', 'Bidang Usaha': 'Penerbitan Buku' },
+                    { 'Kode': '85492', 'Bidang Usaha': 'Jasa Pendidikan Komputer (TIK) Swasta' }
                 ]
             },
             rightCol: {
-                subtitle: 'Paket Solusi',
+                subtitle: 'Hak Kekayaan Intelektual',
                 lines: [
-                    'Berbagai paket layanan mulai dari konsultasi hingga pengembangan enterprise berbasis framework DonatJS.',
-                    'table:solutions_pricing',
+                    'Seluruh produk perangkat lunak yang dikembangkan terdaftar sebagai Hak Cipta resmi di DJKI.',
                     '---',
-                    'Hubungi kami untuk konsultasi kebutuhan dan estimasi proyek.'
+                    'table:table'
                 ],
                 table: [
-                    { 'Kategori': 'Web Portal', 'Layanan': 'Custom CMS / Landing Page', 'Teknologi': 'DonatJS Static' },
-                    { 'Kategori': 'Enterprise', 'Layanan': 'Sistem Informasi Terintegrasi', 'Teknologi': 'MVC / Microservices' },
-                    { 'Kategori': 'E-Learning', 'Layanan': 'Learning Management System', 'Teknologi': 'JSON-Driven Portal' },
-                    { 'Kategori': 'Consultancy', 'Layanan': 'IT Audit &amp; Security', 'Teknologi': 'ISO 27001 Standard' }
+                    { 'Produk': 'DonatJS LMS', 'No. HKI': 'EC002026051501' },
+                    { 'Produk': 'Aplikasi Bank Sampah Cinta', 'No. HKI': 'EC002025035655' },
+                    { 'Produk': 'DonatJS', 'No. HKI': 'EC00202414144' },
+                    { 'Produk': 'BayamJS', 'No. HKI': 'EC00202367008' },
+                    { 'Produk': 'Ktupad MVC Framework', 'No. HKI': 'EC00202219047' },
+                    { 'Produk': 'Ktupad', 'No. HKI': 'EC00201952487' }
                 ]
             }
         }
     ],
 
-    'press': [
-        { section: 'titleHero', title: 'PT Sismadi Langit Solusi' },
+    layanan: [
+        {
+            section: 'titleHero',
+            title: 'Layanan',
+            description: 'Layanan PT Sismadi Langit Solusi didasarkan pada KBLI yang terdaftar secara resmi — mencakup pengembangan perangkat lunak, portal web, penerbitan buku, dan pelatihan TI.'
+        },
         {
             section: 'article',
             layout: 'split',
             leftCol: {
-                subtitle: 'Publikasi Ilmiah',
+                subtitle: 'Pengembangan Perangkat Lunak',
                 lines: [
-                    '** 2026 &middot; EDUTECH Vol.6', 'Presensi Daring Berbasis WebAssembly &amp; Microservices',
-                    '** 2025 &middot; Cendekia Vol.5', 'Implementasi Microservice Bank Sampah Digital',
+                    '**KBLI 62019 &amp; 63122**',
                     '---',
-                    'SINTA Score: 280 &middot; SINTA ID: 6848496'
+                    'Pengembangan sistem informasi, web portal, dan platform digital berbasis framework internal <strong>DonatJS</strong>.',
+                    '---',
+                    'table:table'
+                ],
+                table: [
+                    { 'Kategori': 'Web Portal', 'Contoh Layanan': 'Custom CMS / Landing Page' },
+                    { 'Kategori': 'Sistem Informasi', 'Contoh Layanan': 'Aplikasi bisnis terintegrasi' },
+                    { 'Kategori': 'LMS', 'Contoh Layanan': 'Platform e-learning DonatJS' },
+                    { 'Kategori': 'Konsultasi TI', 'Contoh Layanan': 'Arsitektur sistem &amp; review teknis' }
                 ]
             },
             rightCol: {
-                subtitle: 'Penerbitan Buku',
+                subtitle: 'Penerbitan & Pelatihan',
                 lines: [
-                    'Melayani jasa penerbitan buku referensi teknologi (KBLI 58110).',
-                    '&bull; Buku Ajar &amp; Referensi TIK',
-                    '&bull; Jurnal RETAS &amp; GATRA',
+                    '** Penerbitan Buku (KBLI 58110) **',
+                    'Penerbitan buku referensi teknologi di bawah <strong>PT Sismadi Langit Solusi</strong>. Tersertifikasi Sertifikat Standar OSS No. 29062200810750002.',
                     '---',
-                    '### Open Source',
-                    'badge:DonatJS', 'badge:BayamJS', 'badge:KtuPad', 'badge:IoT ESP32'
+                    '** Pelatihan TI (KBLI 85492) **',
+                    'Kursus pemrograman berbasis skema kompetensi BNSP, diselenggarakan melalui <strong>Sismadi Edu</strong>. Program mencakup Pemrogram Web, Pemrogram Mobile, dan Desainer Web.',
+                    'contact:di-web|Sismadi Edu|sismadi.sch.id|https://sismadi.sch.id',
+                    '---',
+                    '** Perdagangan Komputer (KBLI 47411) **',
+                    'Perdagangan eceran komputer dan perlengkapannya.'
                 ]
             }
         }
     ],
 
-    'order': [
-        { section: 'titleHero', title: 'Pemesanan Layanan' },
+    press: [
+        {
+            section: 'titleHero',
+            title: 'Penerbitan Buku',
+            description: 'PT Sismadi Langit Solusi menerbitkan karya di bidang teknologi informasi — terdaftar resmi KBLI 58110 sejak 16 September 2023.'
+        },
+        {
+            section: 'article',
+            layout: 'split',
+            leftCol: {
+                subtitle: 'Fokus Penerbitan',
+                lines: [
+                    'Karya yang diterbitkan berfokus pada tiga bidang utama:',
+                    '---',
+                    '** Pengembangan Web **',
+                    'Framework, arsitektur sistem, dan praktik pengembangan perangkat lunak modern.',
+                    '---',
+                    '** Desain &amp; Antarmuka **',
+                    'SVG, CSS, dan standar desain antarmuka berbasis web.',
+                    '---',
+                    '** Teknologi Pendidikan **',
+                    'Pemanfaatan teknologi informasi dalam konteks pembelajaran dan pendidikan tinggi.',
+                    '---',
+                    'Untuk informasi kerjasama penerbitan, hubungi kami melalui halaman kontak.',
+                    'contact:di-envelope|Kontak Penerbitan|wawan@sismadi.co.id|mailto:wawan@sismadi.co.id'
+                ]
+            },
+            rightCol: {
+                subtitle: 'Terbitan Mendatang',
+                lines: [
+                    'table:table'
+                ],
+                table: [
+                    { 'Judul': 'Membangun Aplikasi Web Modern dengan DonatJS', 'Status': 'Dalam penyusunan' },
+                    { 'Judul': 'Arsitektur Zero-Dependency: Pendekatan Baru Pengembangan Web', 'Status': 'Dalam penyusunan' },
+                    { 'Judul': 'Panduan Praktis Desain Web dengan SVG dan CSS Modern', 'Status': 'Dalam penyusunan' }
+                ]
+            }
+        }
+    ],
+
+    order: [
+        {
+            section: 'titleHero',
+            title: 'Pemesanan Layanan',
+            description: 'Setiap proyek dimulai dengan konsultasi — bukan langsung invoice. Isi formulir, Tim kami menghubungi Anda dalam waktu 1 hari kerja.'
+        },
         {
             section: 'article',
             layout: 'split',
             leftCol: {
                 subtitle: 'Prosedur',
                 lines: [
-                    'step:Langkah 1:Pilih &amp; Isi Form:Tentukan layanan di formulir kanan.',
-                    'step:Langkah 2:Konsultasi:Tim kami menghubungi Anda via WA/Email.',
-                    'step:Langkah 3:Kontrak:Kesepakatan dituangkan dalam MoU formal.',
-                    'step:Langkah 4:Bayar:<strong>Mandiri: xxxxxxxxxx</strong> a.n. PT Sismadi Langit Solusi',
-                    'step:Langkah 5:Eksekusi:Pekerjaan dimulai sesuai jadwal.'
+                    'step:Langkah 1:Isi Form:Lengkapi formulir di sisi kanan.',
+                    'step:Langkah 2:Konsultasi:Tim kami menghubungi Anda via WA/Email dalam 1 hari kerja.',
+                    'step:Langkah 3:Kontrak:Ruang lingkup dituangkan dalam MoU formal.',
+                    'step:Langkah 4:Pembayaran:Informasi pembayaran dikirim setelah kontrak disepakati.',
+                    'step:Langkah 5:Eksekusi:Pekerjaan dimulai sesuai jadwal yang disepakati.'
                 ]
             },
             rightCol: {
                 subtitle: 'Formulir Order',
                 lines: ['form:order'],
                 fields: [
-                    { type: 'text', name: 'nama', label: 'Nama / Instansi', placeholder: 'Nama Anda' },
-                    { type: 'email', name: 'kontak', label: 'WA / Email', placeholder: '08xx / email@domain.com' },
+                    { type: 'text', name: 'nama', label: 'Nama / Instansi', placeholder: 'Nama Anda atau nama organisasi' },
+                    { type: 'email', name: 'kontak', label: 'WA / Email', placeholder: '08xx atau email@domain.com' },
                     {
                         type: 'select',
                         name: 'layanan',
-                        label: 'Layanan',
-                        options: ['Pengembangan Web (DonatJS)', 'Cybersecurity Audit', 'Penerbitan Buku', 'Pelatihan Kompetensi TI']
+                        label: 'Layanan yang Dibutuhkan',
+                        options: [
+                            'Pengembangan Web / Portal (DonatJS)',
+                            'Sistem Informasi Terintegrasi',
+                            'Penerbitan Buku',
+                            'Pelatihan Kompetensi TI',
+                            'Konsultasi Arsitektur TI',
+                            'Lainnya'
+                        ]
                     },
-                    { type: 'textarea', name: 'pesan', label: 'Detail Kebutuhan', rows: 4 }
-                ]
+                    { type: 'textarea', name: 'pesan', label: 'Detail Kebutuhan', rows: 4, placeholder: 'Ceritakan kebutuhan proyek Anda...' }
+                ],
+                submitText: 'Kirim Permintaan'
             }
         }
     ],
 
-    'contact': [
+    contact: [
         {
             section: 'titleHero',
-            title: 'Hubungi Kami'
+            title: 'Hubungi Kami',
+            description: 'Tersedia via WhatsApp, email, atau formulir di bawah. Kami merespons pesan pada jam kerja. Untuk kebutuhan cepat, gunakan WhatsApp.'
         },
         {
             section: 'article',
@@ -254,13 +283,14 @@ const pages = {
             leftCol: {
                 subtitle: 'Info Kontak',
                 lines: [
-                    'contact:di-whatsapp:WA / Telepon:0878-8507-3237:https://wa.me/6287885073237',
-                    'contact:di-envelope:Email:wawan@sismadi.co.id:mailto:wawan@sismadi.co.id',
-                    'contact:di-geo:Alamat:Jakarta Timur 13780',
-                    'contact:di-linkedin:LinkedIn:linkedin.com/in/sismadi:https://linkedin.com/in/sismadi',
-                    'contact:di-github:GitHub:github.com/sismadi:https://github.com/sismadi',
+                    'contact:di-whatsapp|WA / Telepon|0878-8507-3237|https://wa.me/6287885073237',
+                    'contact:di-envelope|Email|wawan@sismadi.co.id|mailto:wawan@sismadi.co.id',
+                    'contact:di-web|Website|sismadi.co.id|https://sismadi.co.id',
+                    'contact:di-linkedin|LinkedIn|linkedin.com/in/sismadi|https://linkedin.com/in/sismadi',
+                    'contact:di-github|GitHub|github.com/sismadi|https://github.com/sismadi',
+                    'contact:di-geo|Alamat|Jl. Sawo No. 34, Jakarta Timur 13780',
                     '---',
-                    '### Jam Operasional:',
+                    '### Jam Operasional',
                     'Senin &ndash; Jumat: 08.00 &ndash; 17.00 WIB',
                     'Sabtu: 09.00 &ndash; 13.00 WIB'
                 ]
@@ -271,7 +301,7 @@ const pages = {
                 fields: [
                     { type: 'text', name: 'nama', label: 'Nama Lengkap', placeholder: 'Nama Anda' },
                     { type: 'text', name: 'kontak', label: 'Email / WhatsApp', placeholder: 'email@domain.com atau 08xx...' },
-                    { type: 'text', name: 'perihal', label: 'Perihal', placeholder: 'Misal: Konsultasi Sistem' },
+                    { type: 'text', name: 'perihal', label: 'Perihal', placeholder: 'Misal: Konsultasi pengembangan sistem' },
                     { type: 'textarea', name: 'pesan', label: 'Pesan', rows: 5, placeholder: 'Apa yang bisa kami bantu?' }
                 ],
                 submitText: 'Kirim Pesan'
